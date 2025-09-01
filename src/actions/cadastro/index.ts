@@ -4,6 +4,7 @@ import { z } from "zod";
 import { auth } from "@/lib/auth"; // Sua instância do Lucia Auth
 import { db } from "@/db"; // Sua instância do Drizzle ORM
 import { membro, inscricao } from "@/db/schema"; // Importe as tabelas necessárias
+import { redirect } from "next/navigation";
 
 
 
@@ -98,7 +99,7 @@ export async function cadastro(values: unknown): Promise<ActionResult> {
       return { success: true };
     });
 
-    return result;
+    redirect("/area-membro")
 
   } catch (error: any) {
     // 6. Tratamento de erros

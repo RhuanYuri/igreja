@@ -1,6 +1,3 @@
-'use client'
-import Image from "next/image";
-import { MapPin } from "lucide-react";
 import { HeroSection } from "@/components/landing-page/hero";
 import { NavBar } from "@/components/landing-page/navbar";
 import { HistoriaSection } from "@/components/landing-page/historiaSection";
